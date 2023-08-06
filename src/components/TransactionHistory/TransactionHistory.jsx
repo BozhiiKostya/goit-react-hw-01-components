@@ -6,7 +6,7 @@ export const TransactionHistory = ({ items }) => {
   return (
     <TableContainer className="transaction-history">
       <TableHeader />
-      <TableBody id="ttt" items={items} />
+      <TableBody items={items} />
     </TableContainer>
   );
 };
