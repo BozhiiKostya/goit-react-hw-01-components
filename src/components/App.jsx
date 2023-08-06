@@ -5,7 +5,6 @@ import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import { Layout } from './layout';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
-import 'modern-normalize';
 
 export const App = () => {
   return (
