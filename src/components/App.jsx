@@ -1,16 +1,19 @@
+import { FriendList } from './FriendList/FriendList';
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Layout } from './layout';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
+import 'modern-normalize';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <Profile />
+      <Statistics />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </Layout>
   );
 };
