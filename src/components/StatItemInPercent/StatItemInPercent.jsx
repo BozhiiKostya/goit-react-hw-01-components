@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { StatItem } from './StatItemInPercent.styled';
 
-export const StatItemInPercent = ({ data }) => {
+export const StatItemInPercent = ({ stats }) => {
   return stats.map(({ id, label, percentage }) => {
     return (
       <StatItem className="item" key={id}>
