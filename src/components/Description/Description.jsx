@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { ImageUser, Text, Wrapper } from './Description.styled';
 
-export const Description = ({ user }) => {
-  const { username, tag, location, avatar } = user;
-
+export const Description = ({ username, tag, location, avatar }) => {
   return (
     <Wrapper className="description">
       <ImageUser src={avatar} alt="User avatar" className="avatar" />

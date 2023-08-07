@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import { SocialItem, SocialList } from './SocialStats.styled';
 
-export const SocialStats = ({ user }) => {
-  const {
-    stats: { followers, views, likes },
-  } = user;
+export const SocialStats = ({ stats: { followers, views, likes } }) => {
   return (
     <SocialList className="stats">
       <SocialItem>

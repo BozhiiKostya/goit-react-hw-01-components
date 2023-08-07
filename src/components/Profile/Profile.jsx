@@ -2,13 +2,16 @@ import { Description } from 'components/Description/Description';
 import { SocialStats } from 'components/SocialStats/SocialStats';
 import { MainWrapper } from './Profile.styled';
 
-import user from '../../data/user.json';
-
-export const Profile = () => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <MainWrapper className="profile">
-      <Description user={user} />
-      <SocialStats user={user} />
+      <Description
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+      />
+      <SocialStats stats={stats} />
     </MainWrapper>
   );
 };
