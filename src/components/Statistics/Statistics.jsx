@@ -1,13 +1,31 @@
-import { StatItemInPercent } from 'components/StatItemInPercent/StatItemInPercent';
-import { StatSaction, StatTitle, StatList } from './Statistics.styled';
+import {
+  StatSaction,
+  StatTitle,
+  StatList,
+  StatItem,
+} from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <StatSaction className="statistics">
-      <StatTitle className="title">{title}</StatTitle>
+      {title && <StatTitle>{title}</StatTitle>}
       <StatList className="stat-list">
-        <StatItemInPercent stats={stats} />
+        {stats.map(({ id, label, percentage }) => {
+          return (
+            <StatItem className="item" key={id}>
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
+            </StatItem>
+          );
+        })}
       </StatList>
     </StatSaction>
   );
+};
+
+Statistics.prototype = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };

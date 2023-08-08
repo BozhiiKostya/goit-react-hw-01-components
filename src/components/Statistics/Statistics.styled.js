@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomColor } from '../Helper/RandomColor';
 
 export const StatSaction = styled.section`
   width: 400px;
@@ -18,4 +19,14 @@ export const StatList = styled.ul`
   flex-direction: row;
   justify-content: center;
   width: 100%;
+`;
+
+export const StatItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: ${getRandomColor};
+  color: #fff;
 `;
